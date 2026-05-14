@@ -1,2 +1,5 @@
-pip install requests
-pip install python-dotenv
+requests
+python-dotenv
+pandas
+matplotlib
+tiktoken
