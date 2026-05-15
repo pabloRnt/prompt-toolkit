@@ -7,7 +7,7 @@ load_dotenv() # Carrega variáveis do arquivo .env utilizados pela conexão com 
 
 class LLMClient:
     def __init__(self): 
-        self.host = os.getenv("OLLAMA_HOST", "http://localhost:11434").rstrip("/") # Determina o host do modelo
+        self.host = os.getenv("OLLAMA_HOST", "https://ollama.com").rstrip("/") # Determina o host do modelo
         self.model = os.getenv("OLLAMA_MODEL", "gpt-oss:120b") 
         self.timeout = int(os.getenv("OLLAMA_TIMEOUT", "60")) # Determina tempo de expiração - 60s
         self.max_retries = int(os.getenv("OLLAMA_MAX_RETRIES", "3")) # Determina número máximo de tentativas - 3x
