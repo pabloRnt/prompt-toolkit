@@ -1,4 +1,4 @@
-requests
+ollama
 python-dotenv
 pandas
 matplotlib
