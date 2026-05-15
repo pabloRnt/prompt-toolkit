@@ -1,0 +1,68 @@
+{
+  "classificacao_urgencia": [
+    {
+      "input": "A API da LLM parou de responder e todos os fluxos de onboarding de clientes estao falhando desde as 09h.",
+      "esperado": "ALTA"
+    },
+    {
+      "input": "O relatorio financeiro gerou um erro de permissao, mas eu consigo contornar usando a planilha manual temporariamente.",
+      "esperado": "MEDIA"
+    },
+    {
+      "input": "Poderiam adicionar o Joao no grupo de e-mails do projeto CrowD? Ele comeca na proxima segunda-feira.",
+      "esperado": "BAIXA"
+    },
+    {
+      "input": "O servidor principal de banco de dados AWS RDS foi deletado acidentalmente. Precisamos restaurar o backup imediatamente!",
+      "esperado": "ALTA"
+    },
+    {
+      "input": "A impressora do terceiro andar esta com pouca tinta preta.",
+      "esperado": "BAIXA"
+    }
+  ],
+  "extracao_entidades_erro": [
+    {
+      "input": "Traceback (most recent call last): ConnectionRefusedError: [Errno 111] Connection refused on user-api container.",
+      "esperado": "{\"codigo_erro\": \"111\", \"servico\": \"user-api\"}"
+    },
+    {
+      "input": "FATAL: password authentication failed for user 'admin' in database-service. Code 28P01.",
+      "esperado": "{\"codigo_erro\": \"28P01\", \"servico\": \"database-service\"}"
+    },
+    {
+      "input": "Nginx router-proxy returned 502 Bad Gateway after 30000ms timeout.",
+      "esperado": "{\"codigo_erro\": \"502\", \"servico\": \"router-proxy\"}"
+    },
+    {
+      "input": "OOMKilled exception no job de automacao data-pipeline. Exit code 137.",
+      "esperado": "{\"codigo_erro\": \"137\", \"servico\": \"data-pipeline\"}"
+    },
+    {
+      "input": "Error 403 Forbidden when trying to access S3 bucket via image-processor script.",
+      "esperado": "{\"codigo_erro\": \"403\", \"servico\": \"image-processor\"}"
+    }
+  ],
+  "geracao_resposta_cliente": [
+    {
+      "input": "Estou tentando compilar meu script Python e o ambiente virtual de voces simplesmente nao carrega as dependencias. Me ajudem, o prazo e hoje!",
+      "esperado": "geracao_livre"
+    },
+    {
+      "input": "A integracao com a API da Binance parou de registrar minhas ordens de Spot Grid. Quero saber o que aconteceu.",
+      "esperado": "geracao_livre"
+    },
+    {
+      "input": "Nao consigo fazer login no portal do aluno da FIAP. Da senha incorreta, mas eu ja resetei 3 vezes.",
+      "esperado": "geracao_livre"
+    },
+    {
+      "input": "Estava finalizando o TCC e o servidor do CrowG deslogou todo mundo. Perdemos nossos dados?",
+      "esperado": "geracao_livre"
+    },
+    {
+      "input": "O script de automacao de drones que roda no MacBook esta dando lag na transmissao de video.",
+      "esperado": "geracao_livre"
+    }
+  ]
+}
